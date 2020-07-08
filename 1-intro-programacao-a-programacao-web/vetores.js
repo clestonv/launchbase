@@ -1,5 +1,4 @@
 // Vetores
-
 const alunos = [
     {
         aluno: 'Maik',
