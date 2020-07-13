@@ -2,6 +2,7 @@
 
 :root {
     --color-green: #50FA7B;
+    --color-rocket: #7159C1;
 }
 * {
     margin: 0;
@@ -77,4 +78,82 @@ header {
 
 #links-footer a {
     border-bottom: solid 1px var(--color-green);
+}
+
+/* CARDS */
+.cards {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--color-rocket);
+}
+
+.card-image-container img {
+    width: 100%;
+}
+
+.card-content,
+.card-info {
+    padding: 24px;
+}
+
+.card-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card-price {
+    background-color: var(--color-rocket);
+    filter: brightness(90% );
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* MODAL */
+
+.modal-overlay {
+    background-color: rgba(0,0,0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal .close-modal {
+    color: #000;
+    position: absolute;
+    right: 0;
+    right: 8px;
+    top: 8px;
+    cursor: pointer
+}
+
+/* MODAL ACTIVE */
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+iframe {
+    width: 100%;
+    height: 90%;
+    position:absolute;
+    top: 5%;
 }
