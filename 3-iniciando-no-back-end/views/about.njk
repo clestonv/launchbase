@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout.njk" %}
 
 {% block head%}
         <title>Sobre - Cleberson Osorio</title>
@@ -6,16 +6,16 @@
 
 {% block content %}
     <div id="wrapper">
-        <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFNm0oqdJd6gg/profile-displayphoto-shrink_200_200/0?e=1600300800&v=beta&t=5PVtzkhwgfrU_-xF5KLIigaA9lPRwiqa6j6ARQRcc1o" alt="Cleberson Osorio">
-        <h1>Cleberson Osorio</h1>
-        <h2>QA - Senff</h2>
-        <p>Programamador iniciante com foco em Full Stack. Colaborador na <a href="https://www.senff.com.br/" target="_blank">Senff</a></p>
+        <img src="{{ about.avatar_url }}" alt="Imagem de {{ about.name }}">
+        <h1>{{ about.name }}</h1>
+        <h2>{{ about.role }}</h2>
+        <p>{{ about.description }}</p>
     </div>
 
     <div id="links-footer" class="links">
-            <a href="/" target="_blank">Github</a>
-            <a href="https://twitter.com/rocketseat" target="_blank">Twitter</a>
-            <a href="https://www.linkedin.com/school/rocketseat/" target="_blank">Linkedin</a>
+        {% for link in about.links %}
+            <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+        {% endfor %}  
     </div>
 
 {% endblock %}

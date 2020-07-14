@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout.njk" %}
 
 {% block head%}
         <title>Portifolio - Cleberson Osorio</title>
@@ -12,83 +12,20 @@
         </div>
 
         <section class="cards">
-            <div class="card" id="2alg7MQ6_sI">
+            {% for item in items %}
+            <div class="card" id="{{item.id}}">
                 <div class="card-image-container">
-                    <img src="https://img.youtube.com/vi/2alg7MQ6_sI/maxresdefault.jpg" alt="Git e GitHub">
+                    <img src="https://img.youtube.com/vi/{{item.id}}/maxresdefault.jpg" alt="Image de {{item.title}}">
                 </div>
                 <div class="card-content">
-                    <p>Como usar Git e Github na prática</p>
+                    <p>{{item.title}}</p>
                 </div>
                 <div class="card-info">
-                    <p>33 min</p>
-                    <p class="card-price">Free</p>
+                    <p>{{item.duration}}</p>
+                    <p class="card-price">{{item.price}}</p>
                 </div>
             </div>
-
-            <div class="card">
-                <div class="card-image-container">
-                    <img src="https://img.youtube.com/vi/2alg7MQ6_sI/maxresdefault.jpg" alt="Git e GitHub">
-                </div>
-                <div class="card-content">
-                    <p>Como usar Git e Github na prática</p>
-                </div>
-                <div class="card-info">
-                    <p>33 min</p>
-                    <p class="card-price">Free</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-image-container">
-                    <img src="https://img.youtube.com/vi/2alg7MQ6_sI/maxresdefault.jpg" alt="Git e GitHub">
-                </div>
-                <div class="card-content">
-                    <p>Como usar Git e Github na prática</p>
-                </div>
-                <div class="card-info">
-                    <p>33 min</p>
-                    <p class="card-price">Free</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-image-container" id="2alg7MQ6_sI">
-                    <img src="https://img.youtube.com/vi/2alg7MQ6_sI/maxresdefault.jpg" alt="Git e GitHub">
-                </div>
-                <div class="card-content">
-                    <p>Como usar Git e Github na prática</p>
-                </div>
-                <div class="card-info">
-                    <p>33 min</p>
-                    <p class="card-price">Free</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-image-container">
-                    <img src="https://img.youtube.com/vi/2alg7MQ6_sI/maxresdefault.jpg" alt="Git e GitHub">
-                </div>
-                <div class="card-content">
-                    <p>Como usar Git e Github na prática</p>
-                </div>
-                <div class="card-info">
-                    <p>33 min</p>
-                    <p class="card-price">Free</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-image-container">
-                    <img src="https://img.youtube.com/vi/2alg7MQ6_sI/maxresdefault.jpg" alt="Git e GitHub">
-                </div>
-                <div class="card-content">
-                    <p>Como usar Git e Github na prática</p>
-                </div>
-                <div class="card-info">
-                    <p>33 min</p>
-                    <p class="card-price">Free</p>
-                </div>
-            </div>
+            {% endfor %}
         </section>
 
         <div class="modal-overlay">
