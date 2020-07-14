@@ -1,10 +1,11 @@
+<h1 align="center">
+  Desafio 2-3: Página de cursos e iframe
+</h1>
 
 <h3 align="center">
     <img src="assets/desafio-2-3.gif">
 </h3>
-<h3 align="center">
-  Desafio 2-3: Página de cursos e iframe
-</h3>
+
 
 <p align="center">
   <a href="#clipboard-sobre-o-desafio">Sobre o desafio</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
