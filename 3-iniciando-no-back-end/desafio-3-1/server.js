@@ -3,15 +3,25 @@ const nunjucks = require('nunjucks')
 
 const server = express()
 
-server.set("view","html")
+server.set("view engine","html")
+
+server.use(express.static('public')) 
 
 nunjucks.configure("views", {
-    express: server
+    express:server
 })
 
 server.get("/", function(req, res) { 
-	return res.send("Hi Gyus!!")
+	return res.render("about")
 })
+
+server.get("/content", function(req, res) { 
+	return res.render("content")
+})
+
+server.use(function(req, res) {
+    res.status(404).render("not-found");
+  });
 
 server.listen(5000, function(){
     console.log('Server is Running!!')

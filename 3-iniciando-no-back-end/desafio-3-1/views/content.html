@@ -1,0 +1,63 @@
+{% extends "layout.html"%}
+
+{% block head%}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <h1 class="title-content">Conteúdos</h1>
+    <div class="content">
+
+        <div class="card" id="starter">
+            <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/starter.svg" alt="">
+            <h2>Starter</h2>
+            <p>
+                6 Módulos
+            </p>
+            <button>
+                Free
+            </button>
+        </div>
+
+        <div class="card" id="launchbase">
+            <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/launchbase.svg" alt="">
+            <h2>LauchBase</h2>
+            <p>
+                8 Módulos
+            </p>
+            <button>
+                Pay
+            </button>
+        </div>
+
+        <div class="card" id="gostack">
+            <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/gostack.svg" alt="">
+            <h2>GoStack</h2>
+            <p>
+                12 Módulos
+            </p>
+            <button>
+                Pay
+            </button>
+        </div>
+    </div>
+
+    <div class="modal-overlay">
+        <div class="modal minimize">
+            <a class="close-modal icons">
+                <i class="material-icons">close</i>
+            </a>
+            <a class="minimize-modal icons">
+                <i class="material-icons">minimize</i>
+            </a>
+            <a class="maximize-modal">
+                <i class="material-icons">maximize</i>
+            </a>
+            <div class="modal-content">
+                <iframe src="https://rocketseat.com.br/launchbase" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+{% endblock %}
