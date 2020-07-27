@@ -146,6 +146,7 @@ header {
     background-color: var(--color-blue);
     color: aliceblue;
     width: 80%;
+    cursor: pointer;
 }
 
 /* Modal */
