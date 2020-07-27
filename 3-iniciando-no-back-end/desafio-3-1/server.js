@@ -17,7 +17,7 @@ server.get("/", function(req, res) {
 })
 
 server.get("/content", function(req, res) { 
-	return res.render("content")
+	return res.render("content", { items: cursos })
 })
 
 server.use(function(req, res) {
