@@ -2,6 +2,7 @@ const express = require('express')
 const nunjucks = require('nunjucks')
 
 const server = express()
+const cursos = require("./data")
 
 server.set("view engine","njk")
 
