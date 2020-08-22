@@ -1,7 +1,6 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
 const routes = require('./routes')
-const { route } = require('./routes')
 const server = express()
 
 server.use(express.static('public'))
