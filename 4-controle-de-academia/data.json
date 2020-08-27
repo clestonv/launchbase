@@ -1,0 +1,31 @@
+{
+  "instructors": [
+    {
+      "id": 1,
+      "avatar_url": "http://www.google.com",
+      "name": "Biatriz Alferis Polis",
+      "birth": 614736000000,
+      "gender": "F",
+      "services": "Aeróbica, CrossFit, Pilates",
+      "created_at": 1598399918905
+    },
+    {
+      "id": 2,
+      "avatar_url": "http://www.uol.com",
+      "name": "Oliveira Belo",
+      "birth": 551577600000,
+      "gender": "M",
+      "services": "Karatê, Jui-Jitso, Natação",
+      "created_at": 1598400069431
+    },
+    {
+      "id": 3,
+      "avatar_url": "http://www.terra.com",
+      "name": "Igor Borba",
+      "birth": 488505600000,
+      "gender": "M",
+      "services": "Karatê, Jui-Jitso",
+      "created_at": 1598400232956
+    }
+  ]
+}
