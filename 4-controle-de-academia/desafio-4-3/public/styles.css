@@ -2,10 +2,9 @@
 
 :root {
     --primary-color: #FFE347;
-    --second-color: #6457A6;
-    --third-color: #7D7ABC;
-    --quarth-color: #EF767A;
-    --five-color: #23F0C7;
+    --second-color: #093b8b;
+    --third-color: #1266ec;
+    --quarth-color: #fff; 
 }
 
 * {
@@ -69,7 +68,7 @@ header {
 /*== CARD ==*/
 
 .card {
-    background-color: var(--five-color);
+    background-color: var(--quarth-color);
     width: 800px;
     min-height: 400px;
 
@@ -103,17 +102,16 @@ header {
 }
 
 .details .item {
-    margin: 16px 0;
+    margin: 16px 0px;
 }
-
 .item :first-child {
     border-top: 1px solid var(--third-color); 
-    margin: 8px 0;
-
+    padding-top: 16px;
 }
 
 .ite-bord :first-child {
     border: none;
+    padding-top: 0;
 }
 
 
@@ -141,10 +139,10 @@ header {
 /* labels */
 
 .details .item span {
-    padding: 8px 16px;
-    background-color: var(--quarth-color);
+    padding: 8px 16px !important;
+    background-color: var(--third-color);
     border-radius: 16px;
-    color: var(--third-color);
+    color:var(--quarth-color);
     margin-right: 4px;
     margin-top: 8px;
     display: inline-block;
@@ -158,7 +156,8 @@ header {
 input {
     width: 100%;
     outline: none;
-    color: var(--third-color);
+    color: var(--second-color);
+    background-color: var(--quarth-color);
     font-weight: bold;
     font-size: 18px;
 }
@@ -171,6 +170,15 @@ input[type="radio"] {
 input::placeholder {
     font-size: 16px;
     font-weight: normal;
+    color: var(--second-color);
+}
+select {    
+    background-color: var(--quarth-color);
+    width: 100%;
+    outline: none;
+    color: var(--third-color);
+    font-weight: bold;
+    font-size: 18px;
 }
 
 button[type="submit"] {
@@ -182,3 +190,4 @@ button[type="submit"] {
     width: 100%;
     font-size: 16px;
 }
+
