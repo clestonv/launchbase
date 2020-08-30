@@ -108,7 +108,7 @@ header {
 
 }
 
-.item:nth-child(1) {
+.ite-bord :first-child {
     border: none;
 }
 
@@ -126,6 +126,12 @@ header {
     color: var(--second-color);
     font-weight: bold;
     font-size: 18px;
+}
+
+.details h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--second-color);
 }
 
 /* labels */

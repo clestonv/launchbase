@@ -105,13 +105,15 @@ header {
 .details .item {
     margin: 16px 0;
 }
-.details .item div:first-child {
-    border-top: 1px solid var(--third-color);  
-    padding-top: 4px;
+
+.item :first-child {
+    border-top: 1px solid var(--third-color); 
+    margin: 8px 0;
+
 }
 
-.item:first-child {
-    border-top: 0;
+.ite-bord :first-child {
+    border: none;
 }
 
 
@@ -128,6 +130,12 @@ header {
     color: var(--second-color);
     font-weight: bold;
     font-size: 18px;
+}
+
+.details h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--second-color);
 }
 
 /* labels */
