@@ -156,10 +156,20 @@ header {
 input {
     width: 100%;
     outline: none;
-    color: var(--second-color);
+    color: var(--second-color) !important;
     background-color: var(--quarth-color);
     font-weight: bold;
     font-size: 18px;
+}
+
+/* Cor de fundo do autocomplete */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px var(--quarth-color) inset;
+}
+
+/* Cor do texto do autocomplete */
+input:-webkit-autofill {
+    -webkit-text-fill-color: var(--second-color) !important;
 }
 
 input[type="radio"] {
@@ -176,18 +186,24 @@ select {
     background-color: var(--quarth-color);
     width: 100%;
     outline: none;
-    color: var(--third-color);
+    color: var(--second-color);
     font-weight: bold;
     font-size: 18px;
 }
 
 button[type="submit"] {
     padding: 8px 32px;
-    background-color: var(--quarth-color);
+    background-color: var(--third-color);
     color: #FFF;
     border-radius: 5px;
     margin-top: 32px;
     width: 100%;
     font-size: 16px;
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--second-color);
 }
 

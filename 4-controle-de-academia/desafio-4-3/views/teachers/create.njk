@@ -4,7 +4,7 @@
     </title>
     {% endblock%}
     {% block content %}
-        <form class="card" method="POST" action="/instructors">
+        <form class="card" method="POST" action="/teachers">
             <section class="avatar" style="background: url(https://source.unsplash.com/collection/8874679/500x500) no-repeat  center center / cover"></section>
             <section class="details">
 
@@ -14,11 +14,7 @@
                     <div>
                         Avatar URL</div>
                     <div>
-                        <input 
-                            type="url" 
-                            name="avatar_url"
-                            placeholder="htttp://"
-                        >
+                        <input type="url" name="avatar_url" placeholder="http://">
                     </div>
                 </div>
 
@@ -27,11 +23,7 @@
                         Instrutor
                     </div>
                     <div class="ite-bord">
-                        <input 
-                            type="text" 
-                            name="name"
-                            placeholder="Nome do Professor(a)"
-                        >
+                        <input type="text" name="name" placeholder="Nome do Professor(a)">
                     </div>
                 </div>
 
@@ -40,20 +32,19 @@
                         Data de Nascimento
                     </div>
                     <div class="ite-bord">
-                        <input 
-                            type=date 
-                            name="birth"                            
-                        >
+                        <input type="date" name="birth">
                     </div>
-                </div>             
+                </div>
 
                 <div class="item">
                     <div>
                         Sexo
                     </div>
                     <div class="ite-bord">
-                        <span><input type="radio" name="gender" value="M"> Masculino</span>
-                        <span><input type="radio" name="gender" value="F"> Feminino</span>
+                        <span><input type="radio" name="gender" value="M">
+                            Masculino</span>
+                        <span><input type="radio" name="gender" value="F">
+                            Feminino</span>
                     </div>
                 </div>
 
@@ -63,7 +54,7 @@
                     </div>
                     <div class="ite-bord">
                         <select name="escolaridade">
-                            <option value="MC">Selecione</option>
+                            <option value="select">Selecione</option>
                             <option value="MC">Ensino Médio Completo</option>
                             <option value="SC">Ensino Superior Completo</option>
                             <option value="MD">Mestrado e Doutorado</option>
@@ -73,14 +64,22 @@
 
                 <div class="item">
                     <div>
-                        Area de Atuação
+                        Type Learn
                     </div>
                     <div class="ite-bord">
-                        <input 
-                            type="text" 
-                            name="services"
-                            placeholder="Separe os serviços prestados por virgula"
-                        >                        
+                        <span><input type="radio" name="type_learn" value="presencial">
+                            Presencial</span>
+                        <span><input type="radio" name="type_learn" value="distancia">
+                            Distancia</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div>
+                        Skils
+                    </div>
+                    <div class="ite-bord">
+                        <input type="text" name="learn" placeholder="Separe os serviços prestados por virgula">
                     </div>
                 </div>
                 <button type="submit">Salvar</button>
