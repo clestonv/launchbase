@@ -61,5 +61,16 @@ exports.post = function (req, res) {
 
 }
 //update
+exports.edit = function (req, res) { 
+    // Desistruração retirando o ID
+    const { id } = req.params
 
+    const foundInstructors = data.instructors.find(function (instructor) {
+        return id == instructor.id
+    })
+
+    if (!foundInstructors) return res.send("Instructor not found!!!") 
+
+    return res.render('instructors/edit', { instructor: foundInstructors })
+}
 // delete
