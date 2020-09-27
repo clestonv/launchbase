@@ -1,6 +1,29 @@
 const fs = require('fs') // FileSystem
 const data = require('./data.json')
+const { age, graduation, date } = require('./utils')
+const Intl = require('intl')
 
+//show
+exports.show = function(req, res){
+    //req.params
+    const { id } = req.params
+
+    const foundTeachers = data.teachers.find(function(teachers){
+        return teachers.id == id
+    })
+
+    if (!foundTeachers) return res.send("Teachers not found!!")
+   
+    const teachers = {
+        ...foundTeachers,
+        birth: age(foundTeachers.birth),
+        escolaridade: graduation(foundTeachers.escolaridade),        
+        learn: foundTeachers.learn.split(","),
+        create_at: new Intl.DateTimeFormat("pt-BR").format(foundTeachers.create_at)
+    }
+    
+    return res.render("teachers/show", { teachers })
+}
 // create
 exports.post = function (req, res) {
 
@@ -39,4 +62,21 @@ exports.post = function (req, res) {
 
 }
 // update
+exports.edit = function(req, res) {
+    //req.params
+    const { id } = req.params
+
+    const foundTeachers = data.teachers.find(function(teachers){
+        return teachers.id == id
+    })
+
+    if (!foundTeachers) return res.send("Teachers not found!!")
+
+    const teachers = {
+        ...foundTeachers,
+        birth: date(foundTeachers.birth)
+    }
+    //Logo abaixo vou enviar o dados após o edit um objeto
+    return res.render('teachers/edit', { teachers })
+}
 // delete

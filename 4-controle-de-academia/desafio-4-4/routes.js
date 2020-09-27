@@ -9,10 +9,15 @@ routes.get('/', function(req, res) {
 routes.get('/teachers', function(req, res) {
     return res.render('teachers/index')
 })
-
+//create
 routes.get('/teachers/create', function (req, res) {
     return res.render('teachers/create')
 })
+//show
+routes.get('/teachers/:id', teachers.show )
+
+//edit
+routes.get('/teachers/:id/edit', teachers.edit )
 
 routes.post("/teachers", teachers.post )
 
