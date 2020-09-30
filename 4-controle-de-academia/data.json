@@ -35,6 +35,15 @@
       "gender": "F",
       "services": "Yoga, Pilates, Boxe",
       "created_at": 1600735485133
+    },
+    {
+      "id": 5,
+      "avatar_url": "https://cdn-ofuxico.akamaized.net/img/galeria/2018/10/biabrancaaline_agnews4_391117.jpg",
+      "name": "Aline Riscado",
+      "birth": 583200000000,
+      "gender": "F",
+      "services": "Yoga, Pilates, Boxe",
+      "created_at": 1601420609796
     }
   ]
 }
