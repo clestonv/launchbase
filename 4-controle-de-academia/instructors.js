@@ -79,3 +79,31 @@ exports.edit = function (req, res) {
     return res.render('instructors/edit', { instructor })
 }
 // delete
+exports.put = function(req, res) {
+    //Aqui eu faço a lógica de receber esses dados
+	const { id } = req.body // Buscando do body
+    let index = 0
+    
+	const foundInstructor = data.instructors.find(function(instructor, foundIndex){
+			if (id == instructor.id ) {  // Se o ID for 7
+                index = foundIndex       // index recebe 7
+                return true              // Retorna true porque encontramos ID
+            }
+	})
+	
+    if (!foundInstructor) return res.send("Instructor not found!!!")
+    
+    const instructor = {
+        ...foundInstructor,
+        ...req.body,
+        birth: Date.parse(req.body.birth)  // req.body porque ele vem do corpo
+    }
+    // Nessa posição que eu encontrei vou colocar no instructor
+    data.instructors[index] = instructor
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
+        if (err) return res.send("Write error !!!")
+
+        return res.redirect(`/instructors/${id}`)
+    })
+}

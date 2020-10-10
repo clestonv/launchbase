@@ -177,6 +177,7 @@ a.button {
     margin-top: 32px;
     width: 100%;
     font-size: 16px;
+    cursor: pointer;
 }
 
 a.button {
@@ -188,4 +189,9 @@ a.button {
 
 a.button:hover {
     background-color: var(--third-color);
+}
+
+#form-delete button[type="submit"] {
+    margin-top: 8px;
+    background-color: rgb(252, 33, 33);
 }
