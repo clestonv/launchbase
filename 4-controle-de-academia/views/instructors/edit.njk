@@ -25,7 +25,7 @@
                 </form>
 
                 <form id="form-delete" action="/instructors?_method=DELETE" method="POST">
-                    <input type="hidden" name="id" value=" {{ instructor.id }}">
+                    <input type="hidden" name="id" value={{ instructor.id }}>
                     <button type="submit">Delete</button>
                 </form>
 
