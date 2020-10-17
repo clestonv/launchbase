@@ -2,6 +2,10 @@ const fs = require('fs')
 const data = require('./data.json')
 const { age, date } = require('./utils')
 const Intl = require('intl')
+
+exports.index = function(req, res) {
+    return res.render('instructors/index', { instructors: data.instructors })
+}
 // SHOW
 exports.show = function (req, res) {
     // Desistruração retirando o ID
@@ -96,7 +100,8 @@ exports.put = function(req, res) {
     const instructor = {
         ...foundInstructor,
         ...req.body,
-        birth: Date.parse(req.body.birth)  // req.body porque ele vem do corpo
+        birth: Date.parse(req.body.birth),  // req.body porque ele vem do corpo
+        id: Number(req.body.id)
     }
     // Nessa posição que eu encontrei vou colocar no instructor
     data.instructors[index] = instructor

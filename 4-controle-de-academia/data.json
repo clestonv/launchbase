@@ -2,7 +2,7 @@
   "instructors": [
     {
       "id": 1,
-      "avatar_url": "https://source.unsplash.com/collection/3465564",
+      "avatar_url": "https://images.unsplash.com/photo-1584380931214-dbb5b72e7fd0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=687&q=80",
       "name": "Biatriz Alferis Polis",
       "birth": 614736000000,
       "gender": "F",
@@ -10,8 +10,8 @@
       "created_at": 1598399918905
     },
     {
-      "id": "2",
-      "avatar_url": "https://source.unsplash.com/collection/3465564",
+      "id": 2,
+      "avatar_url": "https://images.unsplash.com/photo-1541600278744-d4cba88bb2c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       "name": "Oliveira Belos",
       "birth": 930268800000,
       "gender": "M",
@@ -19,8 +19,8 @@
       "created_at": 1598400069431
     },
     {
-      "id": "3",
-      "avatar_url": "https://source.unsplash.com/collection/3465564",
+      "id": 3,
+      "avatar_url": "https://images.unsplash.com/photo-1598264900290-6e248199af06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       "name": "Igor Borba Osorio",
       "birth": 488505600000,
       "gender": "M",
