@@ -150,7 +150,7 @@ header {
 }
 
 /*  FORM */
-input {
+input, select {
     width: 100%;
     outline: none;
     color: #555;
@@ -199,7 +199,7 @@ a.button:hover {
 /* INDEX INTRUCTORS */
 .table-container {
     display: block;
-    padding: 40px;
+    padding: 35px;
 }
 
 .table-container table {
@@ -241,14 +241,33 @@ tbody tr td:first-child span {
     border: 2px solid #FFF;
 }
 
-tbody tr td:last-child a {
+tbody tr td:last-child a,
+.table-container > a {
     background-color: var(--primary-color);
     padding: 8px 16px;
     text-decoration: none;
     text-transform: uppercase;
     color: #FFF;
     font-size: 12px;
-    border-radius: 4px;
+    border-radius: 4px;    
+}
+tbody tr td:last-child a {  
+    display: grid;
+    grid-template-columns: 25px 1fr;   
+    justify-content: center;
+    align-items: center;
+}
+.table-container > a {
+    margin-bottom: 17px;
+    width: 120px;
+    display: grid;
+    grid-template-columns: 25px 1fr;   
+    justify-content: center;
+    align-items: center;
+}
+.table-container > a span,
+tbody tr td:last-child a span {
+    font-size: 20px;
 }
 
 .table-container thead tr th:last-child,
