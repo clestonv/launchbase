@@ -4,7 +4,13 @@ const { age, date } = require('../utils')
 const Intl = require('intl')
 
 exports.index = function(req, res) {
-    return res.render('instructors/index', { instructors: data.instructors })
+    
+    const instructors = data.instructors.map(instructor => ({ 
+        ...instructor, 
+        services: instructor.services.split(', ') 
+    }) )
+
+    return res.render('instructors/index', { instructors })
 }
 
 exports.create = function (req, res) {
