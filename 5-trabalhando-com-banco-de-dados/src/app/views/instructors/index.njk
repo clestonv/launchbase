@@ -19,7 +19,7 @@
         </div>
 
         
-        <table width="100%">
+        <table width="100%" height="100%">
             <thead>
                 <tr>
                     <th>Instructor</th>
@@ -44,7 +44,7 @@
                     <td>
                         {{ instructor.total_students }}
                     </td>
-                    <td><a href="/instructors/{{instructor.id}}"><span class="material-icons">visibility</span>Ver</a></td>
+                    <td><a href="/instructors/{{instructor.id}}"><span class="material-icons">visibility</span></a></td>
                 </tr>  
                 {% endfor %}                              
             </tbody>
@@ -53,6 +53,7 @@
         <div class="pagination"
             data-page={{ pagination.page }}
             data-total={{ pagination.total }}
+            data-filter={{filter}}
         ></div>
     </div>
 

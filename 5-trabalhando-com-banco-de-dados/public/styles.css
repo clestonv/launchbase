@@ -213,6 +213,7 @@ a.button:hover {
 td, th {
     padding: 16px;
     border-bottom: 1px solid #D9D9D9;
+    text-align: center;
 }
 
 th {
@@ -229,6 +230,7 @@ tbody tr td:first-child {
     display: grid;
     grid-template-columns: 64px 1fr;
     align-items: center;
+    height: 100px;
 }
 
 tbody tr td:first-child span {
@@ -253,7 +255,7 @@ tbody tr td:last-child a,
 }
 tbody tr td:last-child a {  
     display: grid;
-    grid-template-columns: 25px 1fr;   
+    grid-template-columns: 1fr;   
     justify-content: center;
     align-items: center;
 }
@@ -319,4 +321,33 @@ td:last-child {
 
 .table-container .header form button {
     margin: 0;
+}
+
+/**pagination**/
+.table-container {
+    display: grid;
+    grid-template: 64px 1fr 16px / 1fr;
+}
+
+.table-container .header {
+    margin: 0;
+    align-self: start;
+}
+
+.table-container .pagination {
+    margin: 0;
+    align-self: end;
+    justify-self: center;
+}
+
+.pagination a,
+.pagination span {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+.pagination a:hover {
+    filter: brightness(0.4);
+    border-bottom: 2px solid var(--primary-color);
 }
